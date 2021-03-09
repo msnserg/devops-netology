@@ -1,1 +1,3 @@
 will_be_moved
+new line 1 
+new line 2 
