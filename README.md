@@ -5,3 +5,4 @@
 Файлы клучей заканчивающиеся .tfvars
 Файлы override.tf, override.tf.json, Заканчивающиеся на _override.tf и _override.tf.json
 Файлы .terraformrc, terraform.rc
+New line11
