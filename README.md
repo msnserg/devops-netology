@@ -1,8 +1,8 @@
-Игнорируем:
-Все файлы в подкаталогах .terraform
-Файлы заканчивающиеся на *.tfstate и содержащие .tfstate.
-Файл crash.log
-Файлы клучей заканчивающиеся .tfvars
-Файлы override.tf, override.tf.json, Заканчивающиеся на _override.tf и _override.tf.json
-Файлы .terraformrc, terraform.rc
+РРіРЅРѕСЂРёСЂСѓРµРј: 
+Р’СЃРµ С„Р°Р№Р»С‹ РІ РїРѕРґРєР°С‚Р°Р»РѕРіР°С… .terraform
+Р’СЃРµ С„Р°Р№Р»С‹ Р·Р°РєР°РЅС‡РёРІР°СЋС‰РёРµСЃСЏ РЅР° .tfstate Рё СЃРѕРґРµСЂР¶Р°С‰РёРµ .tfstate.
+Р¤Р°РёР» crash.log
+Р¤Р°РёР»С‹ РєР»СЋС‡РµР№ Р·Р°РєР°РЅС‡РёРІР°СЋС‰РёРµСЃСЏ .tfvars
+Р¤Р°РёР» override.tf Рё override.tf.json, Р° С‚Р°Рє Р¶Рµ С„Р°Р№Р»С‹ Р·Р°РєР°РЅС‡РёРІР°СЋС‰РёРµСЃСЏ РЅР° _override.tf Рё _override.tf.json 
+Р¤Р°РёР»С‹ .terraformrc Рё terraform.rc
 New line11
