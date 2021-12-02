@@ -30,7 +30,7 @@
 
 - Скриншот работающего веб-интерфейса Grafana с текущими метриками
 <p align="center">
-  <img width="1200" height="600" src="./assets/yc_03.PNG">
+  <img width="1200" height="600" src="./assets/yc-02.PNG">
 </p>
 
 ## Задача 4 (*)
