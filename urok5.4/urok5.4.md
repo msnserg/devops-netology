@@ -14,12 +14,14 @@
 ## Задача 2
 
 Создать вашу первую виртуальную машину в Яндекс.Облаке.
- Удаляем подсети
+ 
+Удаляем подсети
+
 	 yc vpc subnet delete --name my-subnet-a && yc vpc network delete --name net
 - Скриншот 
 
 <p align="center">
-  <img width="1200" height="600" src="./assets/yc-02.png">
+  <img width="1200" height="600" src="./assets/yc-02.PNG">
 </p>
 
 ## Задача 3
