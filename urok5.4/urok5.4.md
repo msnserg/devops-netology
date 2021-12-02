@@ -8,7 +8,7 @@
 - Скриншот страницы, как на слайде из презентации (слайд 37).
 * Ответ:
 <p align="center">
-  <img width="1200" height="600" src="./assets/yc-1.PNG">
+  <img width="1200" height="600" src="./assets/yc-01.PNG">
 </p>
 
 ## Задача 2
