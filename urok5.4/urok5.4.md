@@ -19,7 +19,7 @@
 - Скриншот 
 
 <p align="center">
-  <img width="1200" height="600" src="./assets/yc-1.png">
+  <img width="1200" height="600" src="./assets/yc-02.png">
 </p>
 
 ## Задача 3
