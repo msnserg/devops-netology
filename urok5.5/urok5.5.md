@@ -17,15 +17,15 @@
 
 ## Задача 2
 Создать ваш первый Docker Swarm кластер в Яндекс.Облаке
-yc init
-yc vpc network create --name net --labels my-label=netology --description "my first network via yc"
-yc vpc subnet create --name my-subnet-a --zone ru-central1-a --range 10.1.2.0/24 --network-name net --description "my first subnet via yc"
-packer build centos-7-base.json
-yc vpc subnet delete --name my-subnet-a && yc vpc network delete --name net
-terraform init
-terraform validate
-terraform plan
- terraform apply -auto-approve
+	yc init
+	yc vpc network create --name net --labels my-label=netology --description "my first network via yc"
+	yc vpc subnet create --name my-subnet-a --zone ru-central1-a --range 10.1.2.0/24 --network-name net --description "my first subnet via yc"
+	packer build centos-7-base.json
+	yc vpc subnet delete --name my-subnet-a && yc vpc network delete --name net
+	terraform init
+	terraform validate
+	terraform plan
+	terraform apply -auto-approve
 
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
 -docker node ls
