@@ -30,7 +30,7 @@ terraform plan
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
 -docker node ls
 <p align="center">
-	<img width="1200" height="600" src="./assets/swarm1.PNG">
+	<img width="1200" height="300" src="./assets/swarm1.PNG">
 </p>
 
 
@@ -41,7 +41,7 @@ terraform plan
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
  	- docker service ls
 	<p align="center">
-	<img width="1200" height="600" src="./assets/swarm2.PNG">
+	<img width="1200" height="300" src="./assets/swarm2.PNG">
 </p>
 
 ##Задача 4 (*)
