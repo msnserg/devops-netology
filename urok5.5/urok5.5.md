@@ -16,15 +16,24 @@
 	позволяя подключенным к ней контейнерам (включая контейнеры служб роя) безопасно обмениваться данными при включенном шифровании.
 
 ## Задача 2
-Создать ваш первый Docker Swarm кластер в Яндекс.Облаке
-	yc init \n
-	yc vpc network create --name net --labels my-label=netology --description "my first network via yc" \n
-	yc vpc subnet create --name my-subnet-a --zone ru-central1-a --range 10.1.2.0/24 --network-name net --description "my first subnet via yc"
+Создать ваш первый Docker Swarm кластер в Яндекс Облаке
+
+	yc init 
+
+	yc vpc network create --name net --labels my-label=netology --description "my first network via yc"
+	
+	yc vpc subnet create --name my-subnet-a --zone ru-central1-a --range 10.1.2.0/24 --network-name net --description "my first subnet via yc
+	
 	packer build centos-7-base.json
+	
 	yc vpc subnet delete --name my-subnet-a && yc vpc network delete --name net
+	
 	terraform init
+	
 	terraform validate
+	
 	terraform plan
+	
 	terraform apply -auto-approve
 
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
@@ -36,8 +45,11 @@
 
 ## Задача 3
 Создать ваш первый, готовый к боевой эксплуатации кластер мониторинга, состоящий из стека микросервисов.
+
 	docker stack ls
+	
 	docker stack ps swarm_monitoring
+	
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
  	- docker service ls
 	<p align="center">
