@@ -24,7 +24,7 @@
 #!/bin/bash
 while ((1==1))
   do
-		curl http://192.168.1.1:80
+		curl https://localhost:4758
 		#echo $?
 		if (($? != 0))
 		then
