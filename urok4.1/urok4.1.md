@@ -23,13 +23,18 @@
 ```bash
 #!/bin/bash
 while ((1==1))
-		do
-			curl https://localhost:4758
-			if (($? != 1))
-			then
-			date > "`date +"%d-%m-%Y"`".log
-			fi
-		done
+  do
+		curl http://192.168.1.1:80
+		#echo $?
+		if (($? != 0))
+		then
+		  date > "`date +"%d-%m-%Y"`".log
+		  continue
+		else
+		  echo "Сервис доступен `date +"%d-%m-%Y-%H-%M-%S"`" >> "`date +"%d-%m-%Y"`".log
+		  exit
+		fi
+	done
 ```
 ## Необходимо написать скрипт
 Проверяет доступность трёх IP: 193.168.0.1, 173.194.222.113, 87.250.250.242 по 80 порту и записывает результат   
