@@ -36,17 +36,21 @@ while ((1==1))
 в файл log. Проверять доступность необходимо пять раз для каждого узла:
 ```bash
 #!/bin/bash
+ip=( "http://192.168.1.1:80" "http://192.168.1.0:80" "http://192.168.1.1:80")
 i=1
   while [ $i -le 5 ]
 	do
 	  ((i++))
-	  curl  http://192.168.1.1:80
-	  if [ $? -ne 0 ]
-	    then
-	      echo "ip1 не доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip1.log
-	    else
-	    echo "ip1 доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip1.log
-	  fi
+    for a in ${ip[@]}
+    do
+      curl  $a
+      if [ $? -ne 0 ]
+	      then
+	        echo $a "ip1 не доступен `date +"%d-%m-%Y-%H-%M-%S"`" >> ip1.log
+	      else
+	      echo $a "ip1 доступен `date +"%d-%m-%Y-%H-%M-%S"`" >> ip1.log
+	    fi
+	  done
 	done
 ```
 ## Необходимо дописать скрипт из предыдущего задания.
@@ -54,53 +58,21 @@ i=1
 Если любой из узлов недоступен - IP этого узла пишется в файл error, скрипт прерывается
 ```bash
 #!/bin/bash
-
-while ((1==1))
-  do
-
-      i=1
-      e=1
-      s=1
-        while [ $i -le 5 ]
-        do
-          ((i++))
-          echo $i
-          curl  http://192.168.1.1:80
-      	  if [ $? -ne 0 ]
-      	    then
-      		    echo "ip1 не доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-      		    exit
-      		  else
-      		  echo "ip1 доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-      		   while [ $e -le 5 ]
-              do
-                ((e++))
-                echo $e
-                curl  http://192.168.0.1:80
-                if [ $? -ne 0 ]
-                  then
-              	    echo "ip2 не доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-              	    exit
-              	  else
-              	  echo "ip2 доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-              	  while [ $s -le 5 ]
-                    do
-                      ((s++))
-                      echo $s
-                      curl  http://192.168.1.1:80
-                      if [ $? -ne 0 ]
-                        then
-                    	    echo "ip3 не доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-                    	    exit
-                    	  else
-                    	  echo "ip3 доступен `date +"%d-%m-%Y-%H-%M-%S"`" > ip.log
-                      fi
-                    done
-                fi
-              done
-      	  fi
-      	done
-  done
-
-
+ip=( "http://192.168.1.1:80" "http://192.168.1.0:80" "http://192.168.1.1:80")
+i=1
+  while [ $i -le 5 ]
+	do
+	  ((i++))
+    for a in ${ip[@]}
+    do
+      curl  $a
+      if [ $? -ne 0 ]
+	      then
+	        echo $a "ip не доступен `date +"%d-%m-%Y-%H-%M-%S"`" >> ip_err.log
+	        exit
+	      else
+	      echo $a "ip доступен `date +"%d-%m-%Y-%H-%M-%S"`" >> ip_err.log
+	    fi
+	  done
+	done
 ```
